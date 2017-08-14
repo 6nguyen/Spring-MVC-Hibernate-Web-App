@@ -12,7 +12,7 @@
 		class="com.gnguyen92.springdemo.poorTrainingStatus">
 	</bean>
 
-    <!-- Define your beans here -->
+    <!-- Bean for constructor injection -->
 	<bean id="myCoach" 
 		class="com.gnguyen92.springdemo.FootballCoach">
 		
@@ -21,7 +21,19 @@
 		<constructor-arg ref="myTrainingStatus" />
 	</bean>
 	
-	
+	<!-- Bean for setter injection -->
+	<bean id="myGolfCoach" 
+		class="com.gnguyen92.springdemo.GolfCoach">
+		
+		<!-- Set up setter injection using dependency's bean id -->
+		<!-- name="trainingStatus", Spring will add "set" in front and capitalize first letter -->
+		<property name="trainingStatus" ref="myTrainingStatus" />
+		
+		<!-- Set up literal value injection -->
+		<property name="email" value="anemail@gmail.com" />
+		<property name="teamName" value="Liger Zero" />
+		
+	</bean>
 	
 </beans>
 
