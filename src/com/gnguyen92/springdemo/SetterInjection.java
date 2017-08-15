@@ -20,6 +20,9 @@ public class SetterInjection {
 		// call methods for literal value injection
 		System.out.println("Email: " + theCoach.getEmail());
 		System.out.println("Team Name: " + theCoach.getTeamName());
+		// call methods for value injection via properties file
+		System.out.println("Wins: " + theCoach.getWins() 
+				+ "\t\tLosses: " + theCoach.getLosses());
 		
 		// close the context
 		context.close();
