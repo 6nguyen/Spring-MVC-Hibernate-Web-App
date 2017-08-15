@@ -76,4 +76,6 @@ public class GolfCoach implements Coach {
 		return "Golf is about precision. " + trainingStatus.getTrainingStatus();
 	}
 
+	
+
 }
